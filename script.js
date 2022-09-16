@@ -1,8 +1,10 @@
 
 
 var messages = document.getElementById('messages');
-getMessagesFromServer();
+var sendButton = document.getElementById('send-btn')
+sendButton.addEventListener('click', sendUserMessage);
 
+getMessagesFromServer();
 
 async function getMessagesFromServer() {
     var response = await fetch("https://fchatiavi.herokuapp.com/get/andriy/?offset=0&limit=10");
@@ -50,6 +52,8 @@ async function sendUserMessage() {
                 Message: userMessage
             }),
     })
+
+    getMessagesFromServer()
 }
 
 
