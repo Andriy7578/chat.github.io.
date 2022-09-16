@@ -56,20 +56,3 @@ async function sendUserMessage() {
     getMessagesFromServer()
 }
 
-
-// fetch ("https://fchatiavi.herokuapp.com/send/andriy/?offset=0&limit=10", {
-//     method: "POST",
-//     body: JSON.stringify({
-//         Nmae: "Andriy",
-//         Message: "hello chat"
-//     }),
-// });
-
-
-// fetch ("https://fchatiavi.herokuapp.com/send/andriy/", {
-//     method: "POST",
-//     body: JSON.stringify({
-//         Name: "Andriy",
-//         Message: "hello chat"
-//     }),
-// });
