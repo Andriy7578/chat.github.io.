@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,16 +16,8 @@
         <h1>Shop Chat</h1>
 
 
-        <div class="message-wrapper">
-            <div class="message">
-                <div class="message-nickname">Lord</div>
-                <div class="message-text">Hello all</div>
-            </div>
-    
-            <div class="message">
-                <div class="message-nickname">Lord</div>
-                <div class="message-text">Hello all</div>
-            </div>
+        <div id="messages" class="message-wrapper">
+            
             
         </div>
 
@@ -33,11 +25,11 @@
             <div class="row">
                 <div class="col-md-2">
                     <span>Nick</span>
-                    <textarea class="send-message-input"></textarea>
+                    <textarea id="nickname-input" class="send-message-input"></textarea>
                 </div>
                 <div class="col-md-8">
                     <span>Message</span>
-                    <textarea class="send-message-input"></textarea>
+                    <textarea id="message-input" class="send-message-input"></textarea>
                 </div>
                 <div class="col-md-2 send-message-btn-wrapper">
                     <button class="send-message-button btn btn-block btn-secondary" type="button">send</button>
