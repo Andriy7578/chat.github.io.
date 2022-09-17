@@ -7,8 +7,8 @@ sendButton.addEventListener('click', sendUserMessage);
 getMessagesFromServer();
 
 async function getMessagesFromServer() {
-    var response = await fetch("https://fchatiavi.herokuapp.com/get/andriy/?offset=0&limit=10");
-
+    var response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    
     response = await response.json();
 
 
@@ -45,7 +45,7 @@ async function sendUserMessage() {
         return;
     }
 
-    await fetch("https://fchatiavi.herokuapp.com/send/andriy/", {
+    await fetch('https://jsonplaceholder.typicode.com/posts', {
         method: "POST",
             body: JSON.stringify({
                 Namae: userNickname,
