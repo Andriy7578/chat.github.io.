@@ -7,7 +7,7 @@ sendButton.addEventListener('click', sendUserMessage);
 getMessagesFromServer();
 
 async function getMessagesFromServer() {
-    var response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    var response = await fetch('https://jsonplaceholder.typicode.com/posts/1/comments');
     
     response = await response.json();
 
@@ -45,10 +45,10 @@ async function sendUserMessage() {
         return;
     }
 
-    await fetch('https://jsonplaceholder.typicode.com/posts', {
+    await fetch('https://jsonplaceholder.typicode.com/posts/1/comments', {
         method: "POST",
             body: JSON.stringify({
-                Namae: userNickname,
+                Name: userNickname,
                 Message: userMessage
             }),
     })
